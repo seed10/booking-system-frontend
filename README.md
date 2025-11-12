@@ -170,4 +170,4 @@ The system provides time slots from 9:00 AM to 5:00 PM in 30-minute intervals:
 ---
 
 Part of the Branch Appointment Booking System
-- Backend Repository: [booking-system-backend](https://github.com/your-org/booking-system-backend)
+- Backend Repository: [booking-system-backend](https://github.com/seed10/booking-system-backend)

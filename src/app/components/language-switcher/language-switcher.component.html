@@ -1,0 +1,18 @@
+<div class="language-switcher">
+  <button mat-button [matMenuTriggerFor]="languageMenu" class="language-button">
+    <span class="flag">{{ currentLanguage.flag }}</span>
+    <span class="language-name">{{ currentLanguage.name }}</span>
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+
+  <mat-menu #languageMenu="matMenu">
+    <button
+      mat-menu-item
+      *ngFor="let language of languages"
+      (click)="changeLanguage(language.code)"
+      [class.active]="currentLang === language.code">
+      <span class="flag">{{ language.flag }}</span>
+      <span>{{ language.name }}</span>
+    </button>
+  </mat-menu>
+</div>

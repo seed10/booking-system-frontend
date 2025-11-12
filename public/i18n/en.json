@@ -1,0 +1,39 @@
+{
+  "title": "Schedule Your Branch Appointment",
+  "subtitle": "Please fill in your details to book an appointment",
+  "loading": "Loading available branches and services...",
+  "form": {
+    "firstName": {
+      "label": "First Name",
+      "placeholder": "Enter your first name",
+      "required": "First name is required",
+      "minlength": "First name must be at least 2 characters"
+    },
+    "lastName": {
+      "label": "Last Name",
+      "placeholder": "Enter your last name",
+      "required": "Last name is required",
+      "minlength": "Last name must be at least 2 characters"
+    },
+    "service": {
+      "label": "Service Required",
+      "required": "Service type is required"
+    },
+    "branch": {
+      "label": "Branch",
+      "required": "Branch is required"
+    },
+    "date": {
+      "label": "Preferred Date",
+      "required": "Date is required"
+    },
+    "time": {
+      "label": "Preferred Time",
+      "required": "Time is required"
+    }
+  },
+  "buttons": {
+    "clear": "Clear",
+    "submit": "Book Appointment"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Cwangcisa Ixesha Lakho Lentlanganiso Kwisebe",
+  "subtitle": "Nceda uzalise iinkcukacha zakho ukuze ubhukishe ixesha lentlanganiso",
+  "loading": "Kuyalayisha amasebe neenkonzo ezifumanekayo...",
+  "form": {
+    "firstName": {
+      "label": "Igama",
+      "placeholder": "Faka igama lakho",
+      "required": "Igama liyafuneka",
+      "minlength": "Igama kufuneka libe nobuncinane oonobumba aba-2"
+    },
+    "lastName": {
+      "label": "Ifani",
+      "placeholder": "Faka ifani yakho",
+      "required": "Ifani iyafuneka",
+      "minlength": "Ifani kufuneka ibe nobuncinane oonobumba aba-2"
+    },
+    "service": {
+      "label": "Inkonzo Efunekayo",
+      "required": "Uhlobo lwenkonzo luyafuneka"
+    },
+    "branch": {
+      "label": "Isebe",
+      "required": "Isebe liyafuneka"
+    },
+    "date": {
+      "label": "Umhla Okhethwayo",
+      "required": "Umhla uyafuneka"
+    },
+    "time": {
+      "label": "Ixesha Elikhethwayo",
+      "required": "Ixesha liyafuneka"
+    }
+  },
+  "buttons": {
+    "clear": "Cima",
+    "submit": "Bhukisha Ixesha"
+  }
+}

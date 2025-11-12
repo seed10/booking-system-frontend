@@ -1,0 +1,39 @@
+{
+  "title": "Hlela Isikhathi Sakho Sokuhlangana Ehhovisi",
+  "subtitle": "Sicela ugcwalise imininingwane yakho ukuze ubhukhe isikhathi sokuhlangana",
+  "loading": "Iyalayisha amahhovisi namasevisi atholakalayo...",
+  "form": {
+    "firstName": {
+      "label": "Igama",
+      "placeholder": "Faka igama lakho",
+      "required": "Igama liyادingeka",
+      "minlength": "Igama kumele libe nezinhlamvu okungenani ezi-2"
+    },
+    "lastName": {
+      "label": "Isibongo",
+      "placeholder": "Faka isibongo sakho",
+      "required": "Isibongo siyadingeka",
+      "minlength": "Isibongo kumele sibe nezinhlamvu okungenani ezi-2"
+    },
+    "service": {
+      "label": "Isevisi Edingekayo",
+      "required": "Uhlobo lwesevisi luyadingeka"
+    },
+    "branch": {
+      "label": "Igatsha",
+      "required": "Igatsha liyadingeka"
+    },
+    "date": {
+      "label": "Usuku Olukhethwayo",
+      "required": "Usuku luyadingeka"
+    },
+    "time": {
+      "label": "Isikhathi Esikhethwayo",
+      "required": "Isikhathi siyadingeka"
+    }
+  },
+  "buttons": {
+    "clear": "Sula",
+    "submit": "Bhukha Isikhathi"
+  }
+}

@@ -1,0 +1,136 @@
+<div class="booking-container">
+  <mat-card class="booking-card">
+    <mat-card-header>
+      <mat-card-title class="form-title">{{ 'title' | transloco }}</mat-card-title>
+      <mat-card-subtitle>{{ 'subtitle' | transloco }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      @if (isLoading) {
+        <div class="loading-container">
+          <mat-spinner diameter="50"></mat-spinner>
+          <p>{{ 'loading' | transloco }}</p>
+        </div>
+      }
+
+      @if (!isLoading) {
+        <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>{{ 'form.firstName.label' | transloco }}</mat-label>
+              <input matInput formControlName="firstName" [placeholder]="'form.firstName.placeholder' | transloco" required>
+              @if (bookingForm.get('firstName')?.hasError('required')) {
+                <mat-error>
+                  {{ 'form.firstName.required' | transloco }}
+                </mat-error>
+              }
+              @if (bookingForm.get('firstName')?.hasError('minlength')) {
+                <mat-error>
+                  {{ 'form.firstName.minlength' | transloco }}
+                </mat-error>
+              }
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>{{ 'form.lastName.label' | transloco }}</mat-label>
+              <input matInput formControlName="lastName" [placeholder]="'form.lastName.placeholder' | transloco" required>
+              @if (bookingForm.get('lastName')?.hasError('required')) {
+                <mat-error>
+                  {{ 'form.lastName.required' | transloco }}
+                </mat-error>
+              }
+              @if (bookingForm.get('lastName')?.hasError('minlength')) {
+                <mat-error>
+                  {{ 'form.lastName.minlength' | transloco }}
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>{{ 'form.service.label' | transloco }}</mat-label>
+              <mat-select formControlName="serviceCode" required>
+                @for (service of services; track $index) {
+                  <mat-option [value]="service.code">
+                    {{ service.displayName }}
+                  </mat-option>
+                }
+              </mat-select>
+              @if (bookingForm.get('serviceCode')?.hasError('required')) {
+                <mat-error>
+                  {{ 'form.service.required' | transloco }}
+                </mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>{{ 'form.branch.label' | transloco }}</mat-label>
+              <mat-select formControlName="branchCode" required>
+                @for (branch of branches; track $index) {
+                  <mat-option [value]="branch.code">
+                    {{ branch.displayName }}
+                  </mat-option>
+                }
+              </mat-select>
+              @if (bookingForm.get('branchCode')?.hasError('required')) {
+                <mat-error>
+                  {{ 'form.branch.required' | transloco }}
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>{{ 'form.date.label' | transloco }}</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="appointmentDate"
+                     [min]="minDate" required>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              @if (bookingForm.get('appointmentDate')?.hasError('required')) {
+                <mat-error>
+                  {{ 'form.date.required' | transloco }}
+                </mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>{{ 'form.time.label' | transloco }}</mat-label>
+              <mat-select formControlName="appointmentTime" required>
+                @for (time of availableTimes; track $index) {
+                  <mat-option [value]="time">
+                    {{ time }}
+                  </mat-option>
+                }
+              </mat-select>
+              @if (bookingForm.get('appointmentTime')?.hasError('required')) {
+                <mat-error>
+                  {{ 'form.time.required' | transloco }}
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <div class="button-container">
+            <button mat-raised-button type="button" class="secondary-button"
+                    (click)="bookingForm.reset()" [disabled]="isSubmitting || isLoading">
+              {{ 'buttons.clear' | transloco }}
+            </button>
+            <button mat-raised-button color="primary" type="submit" class="primary-button"
+                    [disabled]="bookingForm.invalid || isSubmitting || isLoading">
+              @if (isSubmitting) {
+                <mat-spinner diameter="20"></mat-spinner>
+              }
+              @if (!isSubmitting) {
+                <span>{{ 'buttons.submit' | transloco }}</span>
+              }
+            </button>
+          </div>
+        </form>
+      }
+
+    </mat-card-content>
+  </mat-card>
+</div>

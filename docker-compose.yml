@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: booking-frontend
+    ports:
+      - "4200:80"
+    networks:
+      - booking-network
+    environment:
+      - API_URL=http://localhost:8080
+
+networks:
+  booking-network:
+    external: true
+    name: booking-system-backend_booking-network

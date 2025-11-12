@@ -1,0 +1,39 @@
+{
+  "title": "Skeduleer Jou Tak Afspraak",
+  "subtitle": "Vul asseblief jou besonderhede in om 'n afspraak te bespreek",
+  "loading": "Laai beskikbare takke en dienste...",
+  "form": {
+    "firstName": {
+      "label": "Voornaam",
+      "placeholder": "Voer jou voornaam in",
+      "required": "Voornaam is verplig",
+      "minlength": "Voornaam moet ten minste 2 karakters wees"
+    },
+    "lastName": {
+      "label": "Van",
+      "placeholder": "Voer jou van in",
+      "required": "Van is verplig",
+      "minlength": "Van moet ten minste 2 karakters wees"
+    },
+    "service": {
+      "label": "Diens Benodig",
+      "required": "Diens tipe is verplig"
+    },
+    "branch": {
+      "label": "Tak",
+      "required": "Tak is verplig"
+    },
+    "date": {
+      "label": "Voorkeur Datum",
+      "required": "Datum is verplig"
+    },
+    "time": {
+      "label": "Voorkeur Tyd",
+      "required": "Tyd is verplig"
+    }
+  },
+  "buttons": {
+    "clear": "Maak Skoon",
+    "submit": "Bespreek Afspraak"
+  }
+}
